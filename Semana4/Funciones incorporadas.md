@@ -22,9 +22,9 @@ function [mmr, mmm] = minimax(M)
     min_vals = min(M, [], 2);
     
     % Calculate the absolute differences
-    mmr = abs(max_vals - min_vals);
+    mmr = (abs(max_vals - min_vals))';
     
     % Calculate the difference between the maximum and minimum element in the entire matrix
-    mmm = max(M(:)) - min(M(:));
+    mmm = (max(M(:)) - min(M(:)))';
 end
 ```
